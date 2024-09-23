@@ -1,0 +1,1 @@
+// find the number in array that appears once
