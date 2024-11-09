@@ -29,9 +29,7 @@ int digitSum(int num) {
 int main() {
     int num;
     std::cout << "Enter a number: ";
-    int lb;
-    cin>>lb;
-    int ub;
+    
     std::cin >> num;
     
     if (isPrime(num)) {

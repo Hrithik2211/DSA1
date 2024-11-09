@@ -1,24 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int findMissing(int arr[],int m)
-{
-    for (int i = m-2; i >= 0; i--)
-    {
-        if(arr[i] != m)
-        {
-            break;
-        }
-        m--;
-    }
-    return m;
-}
 int main()
 {
-    int m;
-    cout<<"enter the size";
-    cin>>m;
-    int arr[]= {1,2,3,4,5,7,8,9};
-    int x = findMissing(arr,m);
-    cout<<x;
+    map<int, int> m;
+    int arr[] = {1, 2, 4, 6, 3, 7, 8};
+    int n = sizeof(arr) / sizeof(int);
+    for (int i = 0; i < n; i++)
+    {
+        m[arr[i]] = 1;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        if (m.find(i) == m.end())
+        {
+            cout << i << " is missing number in your array" << endl;
+        }
+    }
+
     return 0;
 }
